@@ -7,8 +7,7 @@ const deployGovernanceToken: DeployFunction = async function (hre: HardhatRuntim
   // @ts-ignore
   const { getNamedAccounts, deployments, network } = hre
   const { deploy, log } = deployments
-  const { deployer } = await getNamedAccounts()
-  log("----------------------------------------------------")
+  const { deployer } = await getNamedAccounts() 
   log("Deploying Voice and waiting for confirmations...")
   const governanceToken = await deploy("Voice", {
     from: deployer,
@@ -21,6 +20,7 @@ const deployGovernanceToken: DeployFunction = async function (hre: HardhatRuntim
     log(`Delegating to ${deployer}`)
   await delegate(governanceToken.address, deployer) 
   log("Delegated!")
+  log("_".repeat(90))
 }
 
 const delegate = async (governanceTokenAddress: string, delegatedAccount: string) => {

@@ -14,7 +14,6 @@ const deployGovernorContract: DeployFunction = async function (hre: HardhatRunti
   const governanceToken = await get("Voice")
   const timeLock = await get("ChronosGate")
 
-  log("----------------------------------------------------")
   log("Deploying GovernorContract and waiting for confirmations...")
   const numiscratia = await deploy("Numiscratia", {
     from: deployer,
@@ -30,6 +29,7 @@ const deployGovernorContract: DeployFunction = async function (hre: HardhatRunti
     //waitConfirmations: networkConfig[network.name].blockConfirmations || 1,
   })
   log(`Numiscratia at ${numiscratia.address}`) 
+  log("_".repeat(90))
    
 }
 

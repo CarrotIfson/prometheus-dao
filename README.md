@@ -9,3 +9,7 @@ Used hardhat-deploy package
         yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers
         yarn add --dev hardhat-deploy
         yarn add --dev typescript typechain ts-node @typechain/ethers-v5 @typechain/hardhat @types/chai @types/node 
+
+
+/*** RUN **************************************************************************/
+        yarn hardhat run scripts/propose.ts --network localhost 
