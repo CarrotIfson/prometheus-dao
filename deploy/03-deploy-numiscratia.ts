@@ -29,7 +29,7 @@ const deployGovernorContract: DeployFunction = async function (hre: HardhatRunti
     // we need to wait if on a live network so we can verify properly
     //waitConfirmations: networkConfig[network.name].blockConfirmations || 1,
   })
-  log(`Numiscratia at ${numiscratia.address}`)
+  log(`Numiscratia at ${numiscratia.address}`) 
    
 }
 

@@ -19,7 +19,7 @@ const deployGovernanceToken: DeployFunction = async function (hre: HardhatRuntim
   })
   log(`Voice at ${governanceToken.address}`)
     log(`Delegating to ${deployer}`)
-  await delegate(governanceToken.address, deployer)
+  await delegate(governanceToken.address, deployer) 
   log("Delegated!")
 }
 

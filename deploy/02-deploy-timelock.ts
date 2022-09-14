@@ -16,7 +16,7 @@ const deployTimeLock: DeployFunction = async function (hre: HardhatRuntimeEnviro
     // we need to wait if on a live network so we can verify properly
     // waitConfirmations: networkConfig[network.name].blockConfirmations || 1,
   })
-  log(`ChronosGate at ${timeLock.address}`)
+  log(`ChronosGate at ${timeLock.address}`) 
    
 }
 
