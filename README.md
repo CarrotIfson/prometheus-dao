@@ -1,4 +1,5 @@
-
+Simple on-chain dao.
+Used hardhat-deploy package
 
 /**** SETUP ***********************************************************************/
         yarn add --dev hardhat
