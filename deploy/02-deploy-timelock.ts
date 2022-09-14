@@ -8,15 +8,15 @@ const deployTimeLock: DeployFunction = async function (hre: HardhatRuntimeEnviro
   const { deploy, log } = deployments
   const { deployer } = await getNamedAccounts()
   log("----------------------------------------------------")
-  log("Deploying TimeLock and waiting for confirmations...")
-  const timeLock = await deploy("TimeLock", {
+  log("Deploying ChronosGate and waiting for confirmations...")
+  const timeLock = await deploy("ChronosGate", {
     from: deployer,
     args: [MIN_DELAY, [], []],
     log: true,
     // we need to wait if on a live network so we can verify properly
     // waitConfirmations: networkConfig[network.name].blockConfirmations || 1,
   })
-  log(`TimeLock at ${timeLock.address}`)
+  log(`ChronosGate at ${timeLock.address}`)
    
 }
 

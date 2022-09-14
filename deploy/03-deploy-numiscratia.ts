@@ -11,12 +11,12 @@ const deployGovernorContract: DeployFunction = async function (hre: HardhatRunti
   const { getNamedAccounts, deployments, network } = hre
   const { deploy, log, get } = deployments
   const { deployer } = await getNamedAccounts()
-  const governanceToken = await get("GovernanceToken")
-  const timeLock = await get("TimeLock")
+  const governanceToken = await get("Voice")
+  const timeLock = await get("ChronosGate")
 
   log("----------------------------------------------------")
   log("Deploying GovernorContract and waiting for confirmations...")
-  const governorContract = await deploy("GovernorContract", {
+  const numiscratia = await deploy("Numiscratia", {
     from: deployer,
     args: [
       governanceToken.address,
@@ -29,7 +29,7 @@ const deployGovernorContract: DeployFunction = async function (hre: HardhatRunti
     // we need to wait if on a live network so we can verify properly
     //waitConfirmations: networkConfig[network.name].blockConfirmations || 1,
   })
-  log(`GovernorContract at ${governorContract.address}`)
+  log(`Numiscratia at ${numiscratia.address}`)
    
 }
 
