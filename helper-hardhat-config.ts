@@ -6,6 +6,6 @@ export const DEAD_ADDRESS = "0x0000000000000000000000000000000000000000";
 export const NEW_STORE_VALUE = 27;
 export const FUNC = "store";
 export const PROPOSAL_DESCRIPTION = "Proposal #1: Lore Ipsum";
-export const DEVELOPMENT_CHAINS  = ["hardhat","localhost"];
 
-export const proposalsFile = "proposals.json"
+export const DEVELOPMENT_CHAINS  = ["hardhat","localhost"]; 
+export const proposalsFile = "proposals.json";

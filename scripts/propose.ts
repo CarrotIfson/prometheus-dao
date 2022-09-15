@@ -42,13 +42,14 @@ export async function propose(functionToCall: string, args: any[], proposalDescr
     console.log(`Current Proposal Snapshot: ${proposalSnapShot}`)
     // The block number the proposal voting expires
     console.log(`Current Proposal Deadline: ${proposalDeadline}`)    
+    console.log("_".repeat(90))
 
 }
 
 
 function storeProposalId(proposalId: any) {
-    const chainId = network.config.chainId!.toString();
-    console.log(network.config.chainId) 
+    const chainId = network.config.chainId!.toString(); 
+    let proposals:any;
     if (fs.existsSync(proposalsFile)) {
         proposals = JSON.parse(fs.readFileSync(proposalsFile, "utf8"));
     } else {
